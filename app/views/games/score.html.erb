@@ -1,0 +1,11 @@
+<h1>Result</h1>
+
+<% if @ing == false %>
+  <%= "Sorry but '#{params[:try]}' can't be build out of #{@letters}" %>
+<% elsif @found == false %>
+  <%= "Sorry but '#{params[:try]}' is not an english word" %>
+<% else %>
+  <%= "Congratulation! '#{params[:try]}' works!" %>
+<% end %>
+<br>
+<%= link_to "Play again", new_path %>
